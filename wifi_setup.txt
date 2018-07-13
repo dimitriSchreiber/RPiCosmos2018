@@ -1,0 +1,37 @@
+sudo nano /etc/wpa_supplicant/wpa_supplicant.conf 
+
+
+
+ctrl_interface=DIR=/var/run/wpa_supplicant GROUP=netdev
+
+update_config=1
+
+country=US
+
+
+
+network={
+
+	ssid="UCSD-PROTECTED"
+
+	priority=1
+
+	proto=RSN
+
+	key_mgmt=WPA-EAP
+
+	pairwise=CCMP
+
+	auth_alg=OPEN
+
+	eap=PEAP
+
+	identity=""
+
+	password=""
+
+	phase1="peaplabel=0"
+
+	phase2="auth=MSCHAPV2"
+
+}
